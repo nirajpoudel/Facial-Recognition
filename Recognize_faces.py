@@ -52,10 +52,14 @@ while True:
                      
         name="None matching"
         
-        if(pred[0][1]>0.5):
+        if(pred[0][0]>0.5):
+            name='Ashim'
+        elif(pred[0][1]>0.5):
             name='Newsun'
+        elif(pred[0][2]>0.5):
+            name='Niraj'
         
-        cv2.putText(frame,name, (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0,255,0), 2)
+        cv2.putText(frame,name, (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (255,0,0), 2)
     else:
         cv2.putText(frame,"No face found", (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0,255,0), 2)
     cv2.imshow('Video', frame)
