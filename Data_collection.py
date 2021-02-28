@@ -37,20 +37,20 @@ while True:
         #face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
 
         # Save file in specified directory with unique name
-        file_name_path = './Images/' + str(count) + '.jpg'
+        file_name_path = 'Datasets/test/Niraj/' + str(count) + '.jpg'
         cv2.imwrite(file_name_path, face)
 
         # Put count on images and display live count
-        cv2.putText(face, str(count), (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (255,0,0), 2)
+        cv2.putText(face, str(count), (30, 300), cv2.FONT_HERSHEY_COMPLEX, 1, (255,0,0), 2)
         cv2.imshow('Face Collector', face)
         
     else:
         print("Face not found")
         pass
 
-    if cv2.waitKey(1) == 13 or count == 50: #13 is the Enter Key
+    if cv2.waitKey(1) == 13 or count == 30: #13 is the Enter Key
         break
         
 cap.release()
 cv2.destroyAllWindows()      
-print("Total 5o faces collected!!")
+print("Total 100 faces collected!!")
