@@ -51,8 +51,7 @@ while True:
         print(pred)
                      
         name="None matching"
-        
-        if(pred[0][0]>0.5):
+        if(pred[0][0]>0.8):
             name='Newsun'
         elif(pred[0][1]>0.5):
             name='Niraj'
