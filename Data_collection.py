@@ -34,7 +34,6 @@ while True:
     if face_extractor(frame) is not None:
         count += 1
         face = cv2.resize(face_extractor(frame), (400, 400))
-        #face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
 
         # Save file in specified directory with unique name
         file_name_path = 'Datasets/test/Niraj/' + str(count) + '.jpg'
