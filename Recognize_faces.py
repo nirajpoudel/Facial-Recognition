@@ -15,10 +15,6 @@ model = load_model('VGG16_model1.h5')
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 def face_extractor(img):
-    # Function detects faces and returns the cropped face
-    # If no face detected, it returns the input image
-    
-    #gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(img, 1.3, 5)
     
     if faces is ():
