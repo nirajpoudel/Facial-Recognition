@@ -35,7 +35,7 @@ while True:
         face = cv2.resize(face_extractor(frame), (400, 400))
 
         # Save file in specified directory with unique name
-        file_name_path = 'Datasets/test/Niraj/' + str(count) + '.jpg'
+        file_name_path = './images/' + str(count) + '.jpg'
         cv2.imwrite(file_name_path, face)
 
         # Put count on images and display live count
@@ -51,4 +51,4 @@ while True:
         
 cap.release()
 cv2.destroyAllWindows()      
-print("Total 100 faces collected!!")
+print("Total 30 faces collected!!")
